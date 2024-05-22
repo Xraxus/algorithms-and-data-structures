@@ -31,7 +31,7 @@ The course is divided into several sections, each focusing on specific topics:
 3. **Analyzing Performance of Arrays and Objects**: Examining the efficiency of common data structures.
 4. **Problem Solving Approach**: Step-by-step problem-solving techniques.
 5. **Problem Solving Patterns**: Identifying and utilizing common coding patterns.
-6. **100 OPTIONAL Challenges**: Additional practice exercises.
+6. **Problem Solving Challenges**: Additional practice exercises.
 7. **Recursion**: Understanding and implementing recursion.
 8. **Searching Algorithms**: Implementing various searching techniques.
 9. **Sorting Algorithms**: Implementation and analysis of sorting algorithms.
