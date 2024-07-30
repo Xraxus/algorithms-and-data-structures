@@ -1,6 +1,9 @@
 // time complexity: O(nk)
 // space complexity: O(n + k)
 
+// n - lenght of array
+// k - number of digits(average)
+
 function getDigit(num, i) {
   return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10
 }
