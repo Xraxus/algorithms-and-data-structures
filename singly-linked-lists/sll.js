@@ -78,6 +78,20 @@ class SinglyLinkedList {
 
     return this
   }
+
+  get(index) {
+    if (index < 0 || index >= this.length) return null
+
+    let currentNode = this.head
+    let i = 0
+
+    while (i < index) {
+      currentNode = currentNode.next
+      i++
+    }
+
+    return currentNode
+  }
 }
 
 const list = new SinglyLinkedList()
@@ -85,6 +99,7 @@ const list = new SinglyLinkedList()
 list.push('HELLO')
 list.push('BYE')
 list.push('!')
+list.push('<3')
+list.push('?')
 
-console.log(list.shift())
-console.log(list.unshift('Buenos Dias'))
+console.log(list.get(0))
