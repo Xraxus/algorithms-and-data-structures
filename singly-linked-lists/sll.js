@@ -27,14 +27,6 @@ class SinglyLinkedList {
     return this
   }
 
-  traverse() {
-    let current = this.head
-    while (current) {
-      console.log(current.val)
-      current = current.next
-    }
-  }
-
   pop() {
     if (!this.head) return undefined
 
@@ -57,6 +49,19 @@ class SinglyLinkedList {
 
     return current.val
   }
+
+  shift() {
+    if (!this.head) return undefined
+
+    let currentHead = this.head
+    this.head = currentHead.next
+
+    this.length--
+
+    if (this.length === 0) this.tail = null
+
+    return currentHead
+  }
 }
 
 const list = new SinglyLinkedList()
@@ -65,8 +70,8 @@ list.push('HELLO')
 list.push('BYE')
 list.push('!')
 
-console.log(list.pop())
-console.log(list.pop())
-console.log(list.pop())
-console.log(list.pop())
-console.log(list.pop())
+console.log(list.shift())
+console.log(list.shift())
+console.log(list.shift())
+
+console.log(list)
