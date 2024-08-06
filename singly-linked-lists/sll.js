@@ -92,6 +92,17 @@ class SinglyLinkedList {
 
     return currentNode
   }
+
+  set(index, newValue) {
+    const foundNode = this.get(index)
+
+    if (foundNode) {
+      foundNode.val = newValue
+      return true
+    } else {
+      return false
+    }
+  }
 }
 
 const list = new SinglyLinkedList()
@@ -102,4 +113,7 @@ list.push('!')
 list.push('<3')
 list.push('?')
 
+console.log(list.set(0, '5'))
+console.log(list.set(1, 'mugiwara'))
+console.log(list.set(7, 'bankai'))
 console.log(list.get(0))
