@@ -12,6 +12,14 @@ class SinglyLinkedList {
     this.length = 0
   }
 
+  traverse() {
+    let current = this.head
+    while (current) {
+      console.log(current.val)
+      current = current.next
+    }
+  }
+
   push(val) {
     const newNode = new Node(val)
 
@@ -103,6 +111,22 @@ class SinglyLinkedList {
       return false
     }
   }
+
+  insert(index, value) {
+    if (index < 0 || index > this.length) return false
+    else if (index === this.length) this.push(value)
+    else if (index === 0) this.unshift(value)
+    else {
+      const newNode = new Node(value)
+      const prevNode = this.get(index - 1)
+      const nextNode = prevNode.next
+
+      prevNode.next = newNode
+      newNode.next = nextNode
+    }
+    this.length++
+    return true
+  }
 }
 
 const list = new SinglyLinkedList()
@@ -113,7 +137,8 @@ list.push('!')
 list.push('<3')
 list.push('?')
 
-console.log(list.set(0, '5'))
-console.log(list.set(1, 'mugiwara'))
-console.log(list.set(7, 'bankai'))
-console.log(list.get(0))
+console.log(list.insert(0, 'startnowy'))
+console.log(list.insert(3, 'srodeknowy'))
+console.log(list.insert(7, 'koniecnowy'))
+
+list.traverse()
